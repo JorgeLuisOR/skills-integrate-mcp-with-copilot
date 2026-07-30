@@ -22,6 +22,27 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  position: relative;
+}
+
+.header-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.icon-button {
+  background-color: white;
+  color: #1a237e;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  padding: 0;
+}
+
+.icon-button:hover {
+  background-color: #e8eaf6;
 }
 
 header h1 {
@@ -74,7 +95,6 @@ section h3 {
   margin-bottom: 8px;
 }
 
-/* New styles for participants section */
 .participants-container {
   margin-top: 15px;
   padding-top: 12px;
@@ -100,7 +120,6 @@ section h3 {
   justify-content: space-between;
 }
 
-/* Remove the bullet point pseudo-element */
 .participants-section ul li::before {
   display: none;
 }
@@ -164,7 +183,14 @@ button:hover {
   background-color: #3949ab;
 }
 
-.message {
+.auth-status {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.message,
+.info {
   margin-top: 20px;
   padding: 10px;
   border-radius: 4px;
@@ -176,7 +202,8 @@ button:hover {
   border: 1px solid #a5d6a7;
 }
 
-.error {
+.error,
+.error-text {
   background-color: #ffebee;
   color: #c62828;
   border: 1px solid #ef9a9a;
@@ -186,6 +213,36 @@ button:hover {
   background-color: #d1ecf1;
   color: #0c5460;
   border: 1px solid #bee5eb;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: min(100%, 360px);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #333;
 }
 
 .hidden {
